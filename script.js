@@ -66,9 +66,9 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 tabContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
 
-  //Guard clause
-  if (!clicked) return; // if there is no click, the function ends
-  //remove active classes
+
+  if (!clicked) return; 
+
   tabs.forEach(t => t.classList.remove('operations__tab--active'));
   tabsContent.forEach(c => c.classList.remove('operations__content--active'));
 
@@ -80,7 +80,7 @@ tabContainer.addEventListener('click', function (e) {
     .classList.add('operations__content--active');
 });
 //Passing Arguments to Event Handlers//
-// links fading out after we hover over
+
 const handleHover = function (e, opacity) {
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
